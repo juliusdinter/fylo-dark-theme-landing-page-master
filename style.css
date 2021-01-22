@@ -1,0 +1,458 @@
+:root{
+    --intro: hsl(217, 28%, 15%);
+    --main: hsl(218, 28%, 13%);
+    --footer: hsl(216, 53%, 9%);
+    --testimonials: hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --light-red: hsl(0, 100%, 63%);
+    --neutral: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-family: "Raleway";
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: var(--footer);
+}
+header{
+    padding: 3vw 5vw 6vw;
+    background-color: var(--intro);
+}
+main{
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    background-color: var(--main);
+    padding-top: 10px;
+}
+main article{
+    margin-bottom: 6.25rem;
+}
+a{
+    text-decoration: none;
+    color: var(--neutral);
+}
+a:hover{
+    border-bottom: 1px solid var(--cyan);
+    color: var(--cyan);
+    transition: color 0.5s, border-bottom 0.5s;
+}
+h1{
+    width: 80%;
+    margin: 2rem auto;
+}
+h2{
+    width: 70%;
+    margin-bottom: 1.25rem;
+}
+h1, h2{
+    font-size: 2.1875rem;
+}
+h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+h4{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+h5{
+    font-size: 0.85rem;
+}
+footer{
+    position: relative;
+    padding-top: 10rem;
+    background-color: var(--footer);
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+/* Zajedničko */
+#bg-img{
+    position: static;
+    width: 100%;
+    margin-top: -30vw;
+    z-index: 0;
+}
+#bg-mobile{
+    position: absolute;
+    left: -1000px;
+}
+.bg-img-background{
+    background-color: var(--main);
+}
+#wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    border-radius: 30px;
+    padding: 1rem 4rem;
+    font-family: "Raleway";
+    font-weight: 700;
+    color: white;
+    background-image: linear-gradient(40deg, var(--cyan), var(--blue));
+    text-decoration: none;
+}
+.btn:hover{
+    color: white;
+    border-bottom: none;
+    box-shadow: 0px 2px 15px -2px var(--cyan);
+    transform: translateY(-2px); 
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+/* Navigation */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+nav li{
+    display: inline;
+    margin-left: 4vw;
+}
+.navigation img{
+    width: 10rem;
+}
+/* First(main) content on page */
+#main-content{
+    position: relative;
+    width: 56.25rem;
+    margin: 2rem auto;
+    padding-bottom: 50px;
+    z-index: 1;
+}
+#main-content img{
+    width: 40rem;
+}
+#main-content p{
+    width: 30rem;
+    font-size: 0.9375rem;
+    margin: 0 auto 2rem;
+}
+/* Features */
+#features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10vw;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5vw;
+    padding: 0 10rem;
+}
+/* Productive */
+#productive{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5vw;
+    padding: 0 2rem;
+    align-items: center;
+    text-align: start;
+}
+.productive-section{
+    margin-left: 3rem;
+}
+.productive-section p{
+    margin-bottom: 20px;
+} 
+.productive-img img{
+    margin-left: 2%;
+    width: 95%;
+}
+.fylo-link{
+    width: 9.5rem;
+    border-bottom: solid var(--cyan);
+}
+.fylo-link a{
+    color: var(--cyan);
+    border-bottom: none;
+}
+.fylo-link img{
+    margin-bottom: -3px;
+}
+.fylo-link:hover{
+    width: 10rem;
+    padding-left: 0.5rem;
+    transition: width 0.3s, padding-left 0.3s;
+}
+/* Testimonials */
+#testimonials::before{
+    content: url(images/bg-quotes.png);
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    z-index: -1;
+}
+#testimonials{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3vw;
+    text-align: start;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.testimonial{
+    padding: 3rem 1.5rem 1.5rem;
+    background-color: var(--intro);
+    border-radius: 10px;
+}
+.testimonial-footer{
+    margin-top: 1.5rem;
+    display: flex;
+}
+.image img{
+    border-radius: 100%;
+    width: 2rem;
+}
+.person-desc{
+    margin-left: 10px;
+}
+/* Access */
+#access{
+    background-color: var(--intro);
+    border-radius: 10px;
+    box-shadow: 0px 1px 6px 4px var(--main);
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    z-index: 1;
+    padding: 3rem 3rem 1rem;
+}
+#access p{
+    margin-bottom: 1rem;
+}
+input{
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    width: 60%;
+    margin-right: 20px;
+}
+/* Footer */
+.footer-logo, .footer-content{
+    text-align: start;
+}
+.footer-logo{
+    margin-left: 2rem;
+}
+.footer-content{
+    padding: 2rem 2rem 5rem;
+    display: flex;
+}
+.location{
+    display: flex;
+    width: 25%;
+    margin-right: 100px;
+}
+.location-img img{
+    display: inline;
+}
+.location-p{
+    display: inline;
+    padding-left: 30px;
+}
+.call{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 50%;
+}
+.location-img-p p{
+    display: inline;
+    margin-left: 30px;
+}
+.location-img-p li{
+    display: flex;
+    align-items: center;
+}
+
+/* Footer links */
+footer li{
+    margin-bottom: 20px;
+}
+.about{
+    margin-right: 60px;
+}
+.contact{
+    margin-right: 100px;
+}
+.footer-links{
+    margin-left: -100px;
+    display: flex;
+}
+.social{
+    display: flex;
+}
+.social a{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-right: 10px;
+}
+@media screen and (min-width: 360px) and (max-width: 1000px){
+    h1{
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    h2, h3{
+        font-size: 1.25rem;
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+    footer{
+        top: 100px;
+        padding-top: 10px;
+    }
+    /* Navigation */
+    .navigation img{
+        width: 6rem;
+    }
+    nav li{
+        margin-left: 0.5rem;
+    }
+    /* Main */
+    main{
+        width: 100%;
+        padding-top: 25rem;
+        z-index: 0;
+    }
+    /* Buttons */
+    .btn:nth-child(1){
+        width: 60%;
+    }
+    .btn:nth-child(2){
+        padding: 1rem 2rem;
+    }
+    /* Background images */
+    #bg-img{
+        position: absolute;
+        left: -1000px;
+    }
+    #bg-mobile{
+        position: static;
+        width: 100%;
+        margin-top: -500vw;
+    }
+    .bg-img-background{
+        margin-top: -350px;
+    }
+    /* Features */
+    #features{
+        grid-template-columns: 1fr;
+        grid-row-gap: 5rem;
+        padding: 0 5rem;
+    }
+    /* Productive */
+    #productive{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+    .productive-section{
+        margin-left: 0;
+    }
+    /* Testimonials */
+    #testimonials{
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+        padding: 0 2rem;
+    }
+    #testimonials::before{
+        top: -35px;
+        left: 20px;
+        transform: scale(0.5);
+    }
+    /* access */
+    #access{
+        width: 80%;
+    }
+    #access input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Footer */
+    .footer-content, .footer-links{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+    .about, .contact{
+        margin-bottom: 20px;
+    }
+    .social{
+        width: 25%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .location{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #wrapper{
+        max-width: 100%;
+        margin: 0;
+    }
+    #main-content{
+        width: 100%;
+    }
+    #main-content img{
+        width: 100%;
+    }
+    #main-content p{
+        width: 75%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    #wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .navigation img{
+        width: 10rem;
+    }
+    #features p{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .productive-section, .testimonial{
+        width: 70%;
+        margin: 0 auto;
+    }
+    #testimonials::before{
+        top: -35px;
+        left: 120px;
+        transform: scale(0.5);
+    }
+    .location p{
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1184px){
+    .btn:nth-child(2){
+        padding: 1rem 2rem;
+    }
+}
